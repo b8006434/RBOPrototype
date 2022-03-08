@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@emotion/styled": "^11.6.0",
+    "filter-material-ui": "^2.9.0",
+    "material-table": "^1.69.3",
+    "socket.io": "^4.4.1"
+  }
+}
