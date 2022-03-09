@@ -51,6 +51,7 @@ export default class Register extends React.Component {
         icon: "success",
         type: "success"
       });
+      this.props.history.push('/');
     //If the register fails, handle exceptions and display an error message to the user    
     }).catch((err) => {
       swal({
@@ -107,6 +108,7 @@ export default class Register extends React.Component {
           <Button
             className="button_style"
             variant="contained"
+            name = "signupBttn"
             color="primary"
             size="small"
             disabled={this.state.username == '' && this.state.password == ''}

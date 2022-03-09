@@ -1,8 +1,22 @@
 {
   "dependencies": {
     "@emotion/styled": "^11.6.0",
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "chromedriver": "^99.0.0",
     "filter-material-ui": "^2.9.0",
     "material-table": "^1.69.3",
-    "socket.io": "^4.4.1"
+    "selenium-webdriver": "^4.1.1",
+    "socket.io": "^4.4.1",
+    "supertest": "^6.2.2"
+  },
+  "scripts": {
+    "ApiTests": "cd testing && mocha ApiTests.js",
+    "UITests": "cd testing && mocha UITests.js"
+  },
+
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0-beta.0"
   }
 }

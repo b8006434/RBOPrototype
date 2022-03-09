@@ -97,6 +97,7 @@ export default class Login extends React.Component {
           <Button
             className="button_style"
             variant="contained"
+            name = "loginBttn"
             color="primary"
             size="small"
             disabled={this.state.username == '' && this.state.password == ''}

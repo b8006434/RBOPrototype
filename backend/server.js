@@ -46,7 +46,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: false
 }));
 
-//First-time load set up the login/register page
+//Authorize the jwt token when calling an API
 app.use("/", (req, res, next) => {
   try {
     if (req.path == "/login" || req.path == "/register" || req.path == "/") {
@@ -158,7 +158,8 @@ app.post("/register", (req, res) => {
             } else {
               res.status(200).json({
                 status: true,
-                title: 'Registered Successfully.'
+                title: 'Registered Successfully.',
+                userID: User._id
               });
             }
           });
@@ -219,7 +220,8 @@ app.post("/add-ticket", upload.any(), (req, res) => {
           } else {
             res.status(200).json({
               status: true,
-              title: 'Ticket Added successfully.'
+              title: 'Ticket Added successfully.',
+              ticketID: new_ticket._id
             });
           }
         });
